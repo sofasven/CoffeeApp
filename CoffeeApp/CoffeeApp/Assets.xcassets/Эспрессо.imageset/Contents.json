@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "Эспрессо.jpg",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}
