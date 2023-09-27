@@ -36,6 +36,7 @@ class FeedbackVC: UIViewController {
         saveBtn.isEnabled = false
         errorLbl.isHidden = true
         mark.selectedSegmentIndex = .max
+        textReview.backgroundColor = .systemMint
     }
     private func updateSaveBtn() {
         let numberOfCharacters = textReview.text.description.count

@@ -27,12 +27,11 @@ class ReviewsTVC: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
-        cell.textLabel?.text = feedback?[indexPath.row].text
-        cell.detailTextLabel?.text = "\(feedback?[indexPath.row].mark ?? 0)"
+        cell.textLabel?.text = "\(feedback?[indexPath.row].date ?? Date())"
+        cell.detailTextLabel?.text = (feedback?[indexPath.row].text ?? "") + "\n" + "\(Calculating.countStars(mark: feedback?[indexPath.row].mark ?? 0))"
+        cell.backgroundColor = .lightGray
 
         return cell
     }
-
-
 
 }

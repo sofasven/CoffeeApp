@@ -15,6 +15,4 @@ struct Coffee {
     
     var feedbacks: [Feedback] = []
     
-    var rating = ""
-    
 }

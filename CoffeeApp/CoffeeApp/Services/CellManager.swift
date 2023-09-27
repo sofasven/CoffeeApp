@@ -10,7 +10,7 @@ import UIKit
 class CellManager {
     static func configure(_ cell: UITableViewCell, with coffee: Coffee ) {
         cell.textLabel?.text = coffee.name
-        cell.detailTextLabel?.text = String(coffee.price) + " BYN\n"
+        cell.detailTextLabel?.text = String(coffee.price) + " BYN"
         cell.imageView?.image = coffee.image
     }
     
