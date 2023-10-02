@@ -29,7 +29,9 @@ class ReviewsTVC: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
         cell.textLabel?.text = "\(feedback?[indexPath.row].date ?? Date())"
         cell.detailTextLabel?.text = (feedback?[indexPath.row].text ?? "") + "\n" + "\(Calculating.countStars(mark: feedback?[indexPath.row].mark ?? 0))"
-        cell.backgroundColor = .lightGray
+        cell.backgroundColor = .black
+        cell.textLabel?.textColor = .white
+        cell.detailTextLabel?.textColor = .white
 
         return cell
     }

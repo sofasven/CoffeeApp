@@ -20,6 +20,7 @@ class FeedbackVC: UIViewController {
         super.viewDidLoad()
         setupUI()
     }
+    
     @IBAction func saveAction(_ sender: UIButton) {
         guard let indexPath = index else { return }
         let feedback = Feedback(text: textReview.text, mark: Double(mark.selectedSegmentIndex + 1))
@@ -36,7 +37,8 @@ class FeedbackVC: UIViewController {
         saveBtn.isEnabled = false
         errorLbl.isHidden = true
         mark.selectedSegmentIndex = .max
-        textReview.backgroundColor = .systemMint
+        textReview.backgroundColor = .black
+        textReview.textColor = .white
     }
     private func updateSaveBtn() {
         let numberOfCharacters = textReview.text.description.count
